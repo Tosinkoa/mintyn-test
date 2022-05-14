@@ -71,7 +71,7 @@
 }
 
 .sidebar_logo {
-  @apply h-16 flex relative items-center;
+  @apply h-16 flex relative items-center ml-8;
 }
 
 .sidebar_name_logo {
@@ -79,7 +79,7 @@
 }
 
 .sidebar_list_background {
-  @apply flex flex-col mt-2 min-h-full remove-scrollbar text-xs -space-y-1;
+  @apply flex flex-col mt-2 min-h-full remove-scrollbar text-xs -space-y-1 ml-5;
 }
 
 .sidebar_message {

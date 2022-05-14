@@ -32,9 +32,29 @@ export default function Home() {
     ],
   };
 
+  const widgetData = [
+    {
+      title: "Daily Transactions Volume" ,
+      number: "2,342",
+    },
+    {
+      title: "Daily Transactions Volume" ,
+      number: "4,000,000",
+    },
+    {
+      title: "Total Transaction Volume",
+      number: "452,000",
+    },
+    {
+      title: "Daily Transactions Volume" ,
+      number: "4,000,000",
+    },
+  ];
+
+
   return (
     <Layout>
-      <Widget />
+      <Widget widgetData={widgetData}/>
       <div className="w-full">
       {/* <Chart data={data} height={200} /> */}
       </div>
