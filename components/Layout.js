@@ -1,10 +1,10 @@
-import Head from "next/head";
 import { useState } from "react";
+import Head from "next/head";
+import Dropdown from "./Dropdown";
+import Sidebar from "./Sidebar";
 
 const Layout = ({ title, keywords, description, children }) => {
-  const dispatch = useDispatch();
   const [showDropdown, setShowDropdown] = useState(false);
-  const showUser = useSelector((state) => state.showUser.showUser);
 
   const dropdownHandler = () => setShowDropdown(!showDropdown);
 
@@ -15,15 +15,12 @@ const Layout = ({ title, keywords, description, children }) => {
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
         <link rel="icon" href="/favicon.ico" />
-      </Head> 
+      </Head>
 
-      <div>
-          <div>
-              <h1>TransMonitor</h1>
-          </div>
-      <div>
-          {children}
-      </div>
+      <div className="relative text-gray-700 bg-gray-300">
+        <div className="layout_overlay"></div>
+        <Sidebar dropdownHandler={dropdownHandler} >{children}</Sidebar>
+        <Dropdown dropdownHandler={dropdownHandler} showDropdown={showDropdown} />
       </div>
     </div>
   );

@@ -1,3 +1,133 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/*______________________________________COMPONENTS______________________________________________*/
+
+/*-----------Dropdown----------*/
+
+.messagebackground {
+  @apply text-white  bg-red-500 text-center rounded-full w-4  absolute mx-0 -right-1 -top-2 text-xs;
+}
+
+.backdrop {
+  @apply bg-black  opacity-60 select-none top-0 bottom-0 w-full min-h-screen lg:hidden absolute z-10;
+}
+
+.dropdown_background {
+  @apply flex flex-col top-0 h-screen overflow-y-auto bg-gray-50  lg:hidden fixed sm:w-8/12 md:w-1/4 pl-2 z-20;
+}
+
+.dropdown_header {
+  @apply h-16 w-full -space-x-3  inline-flex justify-between cursor-pointer;
+}
+
+.dropdown_header_title {
+  @apply text-base sm:mt-6 sm:text-sm font-logo-font text-indigo-900 mt-5;
+}
+
+.dropdown_close {
+  @apply text-2xl flex text-gray-800 mt-5 m-2 sm:text-base md:text-lg;
+}
+
+/*-----------NavBar----------*/
+
+.navbar_background {
+  @apply fixed inline-flex items-center justify-between h-16 z-10 top-0 bg-gray-50  w-full border-b-2 left-0;
+}
+
+.sec_navbar_background {
+  @apply flex w-full mx-auto px-2 sm:px-6 lg:px-8 mt-3;
+}
+
+.navbar_message_bg {
+  @apply text-white  bg-blue-500 text-center  rounded-full w-4 absolute right-0 top-0 text-xs;
+}
+
+.third_navbar_background {
+  @apply flex-1 flex items-center justify-center sm:items-stretch sm:justify-start;
+}
+
+.navbar_logo {
+  @apply h-16 w-full -space-x-3 sm:-ml-6 inline-flex justify-between lg:hidden;
+}
+
+.navbar_header_title {
+  @apply md:mt-6 font-logo-font sm:text-sm text-indigo-900 mt-5 sm:mt-6;
+}
+
+.navbar_icons {
+  @apply p-1 text-gray-400 hover:text-white focus:bg-gray-300;
+}
+
+.navbar_profile_pics {
+  @apply bg-gray-800 flex text-sm rounded-full;
+}
+
+/*-----------Sidebar----------*/
+
+.sidebar_background {
+  @apply lg:relative z-20 lg:w-2/12 w-2/4 lg:flex flex-col top-0  min-h-screen  sm:hidden;
+}
+
+.sidebar_logo {
+  @apply h-16 flex relative items-center;
+}
+
+.sidebar_name_logo {
+  @apply text-lg font-logo-font text-indigo-900 mt-1;
+}
+
+.sidebar_list_background {
+  @apply flex flex-col mt-2 min-h-full remove-scrollbar text-xs -space-y-1;
+}
+
+.sidebar_message {
+  @apply text-white w-3 bg-red-500 rounded-full text-center h-3 absolute mx-0 -right-1 -top-1;
+}
+
+.sidebar_menu {
+  @apply pl-6 cursor-pointer font-my-font leading-3 tracking-normal py-4 text-indigo-700 focus:text-indigo-700 outline-none hover:bg-indigo-200 focus:bg-indigo-200 focus:ring-0 active:bg-indigo-200;
+}
+
+.sidebar_title {
+  @apply ml-4 my-1 font-my-font  font-bold text-gray-700;
+}
+
+/*-----------Table----------*/
+
+.table {
+  @apply w-full lg:text-sm sm:text-xs  sm:text-left md:text-center text-gray-500;
+}
+
+.table_head {
+  @apply text-xs text-gray-700 w-11/12 justify-center uppercase bg-gray-50;
+}
+
+.row_head_icon_bg {
+  @apply bg-gray-200 rounded-full p-1 ml-2 flex;
+}
+
+.table_row {
+  @apply md:font-bold sm:font-semibold;
+}
+
+.table_head_row {
+  @apply lg:px-6 sm:px-3 py-3 text-left bg-gray-300;
+}
+
+.table_head_row {
+  @apply bg-white border-b hover:bg-gray-50;
+}
+
+.table_head_row_text {
+  @apply lg:px-6 sm:px-2 py-4  font-medium text-gray-900;
+}
+
+.table_data {
+  @apply lg:px-6 py-4 sm:px-1 sm:text-xs text-left;
+}
+
+.table_detail {
+  @apply font-medium inline-flex text-blue-500 hover:underline;
+}
