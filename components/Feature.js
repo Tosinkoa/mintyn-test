@@ -2,9 +2,9 @@ import Chart from "../components/Chart";
 
 const Feature = ({ data }) => {
   return (
-    <div className="flex w-full mt-4 sm:flex-col md:flex-row">
+    <div className="flex w-full mt-4 sm:flex-col lg:flex-row">
       <Chart data={data} />
-      <div className=" rounded-md py-4 px-10 shadow-md bg-gray-50 text-sm font-semibold w-5/12">
+      <div className=" rounded-md py-4 px-10 shadow-md bg-gray-50 text-sm font-semibold lg:w-5/12 sm:w-full sm:mt-4 lg:mt-0">
         <div>
           <h1 className="font-bold mt-4 mb-2">Orders</h1>
           <div className="flex w-full h-1.5 ">
@@ -15,14 +15,14 @@ const Feature = ({ data }) => {
             <p>Pending Orders:</p>
             <span className="font-bold text-orange-300"> 20</span>
           </div>
-          <div className="flex my-1 space-x-1">
+          <div className="flex my-1 space-x-1 ">
             <p className="flex">Reconcilled Orders:</p> <span className="font-bold text-green-500">80</span>
           </div>
           <div className="flex my-1 space-x-1">
             <p className="flex">Total Orders:</p> <span className="font-bold text-blue-600"> 100</span>
           </div>
         </div>
-        <div className="border-b-4 -ml-20 -mr-20"></div>
+        <div className="border-b-4 -ml-10 -mr-20"></div>
         <div>
           <h1 className="font-bold mt-4 mb-2">Payments</h1>
           <div className="flex w-full h-1.5 ">

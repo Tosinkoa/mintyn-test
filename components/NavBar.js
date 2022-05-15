@@ -17,9 +17,9 @@ const NavBar = ({ children, dropdownHandler }) => {
             <div className="sec_navbar_background">
               <div className="third_navbar_background">
                 <div className="text-blue-700 sm:text-lg font-extrabold md:text-xl sm:flex lg:hidden">TransMonitor</div>
-                <div className="inline-flex space-x-3 ml-40">
-                  <FaSearch className="text-xl flex mt-2" />
-                  <input type="search" placeholder="Search..." className="flex rounded-sm h-8 p-4" />
+                <div className="inline-flex lg:ml-72 sm:ml-6">
+                  <FaSearch className="text-xl md:flex sm:hidden mt-2" />
+                  <input type="search" placeholder="Search..." className="flex rounded-sm h-8 p-4 bg-inherit smd:min-w-fit sm:w-full md:border-0 sm:border-2 border-gray-400" />
                 </div>
               </div>
 
@@ -31,7 +31,7 @@ const NavBar = ({ children, dropdownHandler }) => {
                   <MdNotificationsNone className=" text-gray-700 text-2xl cursor-pointer" />
                 </a>
 
-              <div className="text-right flex flex-col text-sm font-semibold ">
+              <div className="text-right md:flex sm:hidden flex-col text-sm font-semibold ">
                 <div className="-mt-2">
                   <p>Hello</p>
                   <p>Oluwaleke Ojo</p>
@@ -61,7 +61,7 @@ const NavBar = ({ children, dropdownHandler }) => {
       )}
 
       <div>
-        <div className="w-full pl-24 pr-10">{children}</div>
+        <div className="w-full lg:pl-24 lg:pr-10 sm:px-5">{children}</div>
       </div>
     </div>
   );

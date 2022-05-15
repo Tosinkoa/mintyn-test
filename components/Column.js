@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { GoPrimitiveDot } from "react-icons/go";
+import { IoIosArrowDown } from "react-icons/io";
 
 export const GoodsColumn = [
   {
@@ -7,12 +9,53 @@ export const GoodsColumn = [
     accessor: (d) => (
       <div className="inline-flex  space-x-4 ">
         <Image src={d.img} alt="user" className="rounded-full" height={50} width={50} />
-        <p className="inline-flex mt-4" >{d.goods}</p>
+        <p className="inline-flex mt-4">{d.goods}</p>
       </div>
     ),
   },
   { Header: "Price", accessor: "price" },
   { Header: "Transaction-No", accessor: "transaction-no" },
   { Header: "Time", accessor: "time" },
-  { Header: "Status", accessor: "pending" },
+
+  {
+    Header: "",
+    accessor: "pending",
+    Cell: ({ row }) => (
+      <div>
+        {row.values.pending === "Pending" && (
+            <div className="inline-flex  justify-between font-semibold">
+            <div className="text-yellow-400 inline-flex border-2 border-gray-400 rounded-full px-4 py-1">
+            <GoPrimitiveDot className="mt-0.5 text-sm " />
+            <p >
+               Pending
+            </p>
+            </div>
+            <IoIosArrowDown className="ml-1 mt-2" />
+          </div>
+        )}
+        {row.values.pending === "Reconcilled" && (
+          <div className="inline-flex  justify-between font-semibold">
+            <div className="text-green-500 inline-flex border-2 border-gray-400 rounded-full px-4 py-1">
+            <GoPrimitiveDot className="mt-0.5 text-sm " />
+            <p >
+               Reconcilled
+            </p>
+            </div>
+            <IoIosArrowDown className="ml-1 mt-2" />
+          </div>
+        )}
+        {row.values.pending === "Un-Reconcilled" && (
+            <div className="inline-flex  justify-between font-semibold">
+            <div className="text-gray-300 inline-flex border-2 border-gray-400 rounded-full px-4 py-1">
+            <GoPrimitiveDot className="mt-0.5 text-sm " />
+            <p >
+               Un-Reconcilled
+            </p>
+            </div>
+            <IoIosArrowDown className="ml-1 mt-2" />
+          </div>
+        )}
+      </div>
+    ),
+  },
 ];

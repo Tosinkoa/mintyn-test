@@ -42,7 +42,7 @@ const Table = () => {
   return (
     <div className="mb-6">
       <p className="text-4xl my-6">Payments</p>
-      <div className="inline-flex flex-row w-full">
+      <div className="md:inline-flex sm:flex sm:flex-row md:flex-row w-full md:text-sm sm:text-xs">
         <div className="inline-flex">
           <span>Showing</span>
           <select
@@ -107,7 +107,7 @@ const Table = () => {
           </tbody>
         </table>
       </div>
-      <div className="mt-4 ml-6 inline-flex flex-row text-sm font-semibold justify-between w-full">
+      <div className="mt-4 ml-6 inline-flex flex-row text-sm font-semibold justify-between w-full md:text-sm sm:text-xs">
         <div>
           Showing
           <span>
