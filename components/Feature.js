@@ -4,12 +4,12 @@ const Feature = ({ data }) => {
   return (
     <div className="flex w-full mt-4 sm:flex-col lg:flex-row">
       <Chart data={data} />
-      <div className=" rounded-md py-4 px-10 shadow-md bg-gray-50 text-sm font-semibold lg:w-5/12 sm:w-full sm:mt-4 lg:mt-0">
+      <div className="order_payment_bg">
         <div>
           <h1 className="font-bold mt-4 mb-2">Orders</h1>
           <div className="flex w-full h-1.5 ">
-            <div className="w-4/5 bg-green-500 rounded-l-full"></div>
-            <div className=" w-1/5 bg-orange-300 rounded-r-full"></div>
+            <div className="green_line"></div>
+            <div className="orange_line"></div>
           </div>
           <div className="inline-flex mt-2 mb-1 space-x-1">
             <p>Pending Orders:</p>
@@ -26,8 +26,8 @@ const Feature = ({ data }) => {
         <div>
           <h1 className="font-bold mt-4 mb-2">Payments</h1>
           <div className="flex w-full h-1.5 ">
-            <div className="w-4/5 bg-green-500 rounded-l-full"></div>
-            <div className=" w-1/5 bg-orange-300 rounded-r-full"></div>
+            <div className="green_line"></div>
+            <div className="orange_line"></div>
           </div>
           <div className="inline-flex mt-2 mb-1 space-x-1">
             <p>Pending Orders:</p>

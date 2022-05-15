@@ -28,8 +28,6 @@ const Table = () => {
     canNextPage,
     canPreviousPage,
     setPageSize,
-    gotoPage,
-    pageCount,
     pageOptions,
     state,
     setGlobalFilter,
@@ -42,13 +40,10 @@ const Table = () => {
   return (
     <div className="mb-6">
       <p className="text-4xl my-6">Payments</p>
-      <div className="md:inline-flex sm:flex sm:flex-row md:flex-row w-full md:text-sm sm:text-xs">
+      <div className="menu_on_table">
         <div className="inline-flex">
           <span>Showing</span>
-          <select
-            onChange={(e) => setPageSize(Number(e.target.value))}
-            className="bg-inherit py-1 rounded h-8 text-center -mt-1 text-blue-600 font-semibold"
-          >
+          <select onChange={(e) => setPageSize(Number(e.target.value))} className="show_page">
             {[10, 20, 30, 40, 50].map((pageSize) => (
               <option key={pageSize} value={pageSize}>
                 {pageSize}
@@ -67,11 +62,21 @@ const Table = () => {
           <div className="inline-flex">
             <p className="mx-3">Show</p>
             <select className="px-2 py-1 rounded border-2 border-gray-400 ">
-              <option className="bg-gray-50" value="All">All</option>
-              <option className="bg-gray-50" value="Reconcilled">Reconcilled</option>
-              <option className="bg-gray-50" value="Un-reconcilled">Un-reconcilled</option>
-              <option className="bg-gray-50" value="Settled">Settled</option>
-              <option className="bg-gray-50" value="Unsettled">Unsettled</option>
+              <option className="bg-gray-50" value="All">
+                All
+              </option>
+              <option className="bg-gray-50" value="Reconcilled">
+                Reconcilled
+              </option>
+              <option className="bg-gray-50" value="Un-reconcilled">
+                Un-reconcilled
+              </option>
+              <option className="bg-gray-50" value="Settled">
+                Settled
+              </option>
+              <option className="bg-gray-50" value="Unsettled">
+                Unsettled
+              </option>
             </select>
           </div>
         </div>
@@ -107,7 +112,7 @@ const Table = () => {
           </tbody>
         </table>
       </div>
-      <div className="mt-4 ml-6 inline-flex flex-row text-sm font-semibold justify-between w-full md:text-sm sm:text-xs">
+      <div className="menu_below_table">
         <div>
           Showing
           <span>
@@ -117,20 +122,12 @@ const Table = () => {
         </div>
 
         <div className="inline-flex mr-8">
-          <button
-            onClick={() => previousPage()}
-            disabled={!canPreviousPage}
-            className=" rounded px-2 border-2 border-gray-400 p-2 py-1"
-          >
+          <button onClick={() => previousPage()} disabled={!canPreviousPage} className=" prev_next_btn">
             Previous
           </button>
           <p className="border-2 rounded border-gray-400 p-2 text-white px-4 bg-blue-600">1</p>
           <p className="border-2 rounded p-2 px-4 border-gray-400">2</p>
-          <button
-            onClick={() => nextPage()}
-            disabled={!canNextPage}
-            className="rounded px-2 border-2 border-gray-400 p-2 py-1"
-          >
+          <button onClick={() => nextPage()} disabled={!canNextPage} className="prev_next_btn">
             Next
           </button>
         </div>

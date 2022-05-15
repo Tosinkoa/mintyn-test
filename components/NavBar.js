@@ -16,10 +16,10 @@ const NavBar = ({ children, dropdownHandler }) => {
           <div className="navbar_background">
             <div className="sec_navbar_background">
               <div className="third_navbar_background">
-                <div className="text-blue-700 sm:text-lg font-extrabold md:text-xl sm:flex lg:hidden">TransMonitor</div>
+                <div className="navbar_logo">TransMonitor</div>
                 <div className="inline-flex lg:ml-72 sm:ml-6">
                   <FaSearch className="text-xl md:flex sm:hidden mt-2" />
-                  <input type="search" placeholder="Search..." className="flex rounded-sm h-8 p-4 bg-inherit smd:min-w-fit sm:w-full md:border-0 sm:border-2 border-gray-400" />
+                  <input type="search" placeholder="Search..." className="navbar_search" />
                 </div>
               </div>
 
@@ -31,7 +31,7 @@ const NavBar = ({ children, dropdownHandler }) => {
                   <MdNotificationsNone className=" text-gray-700 text-2xl cursor-pointer" />
                 </a>
 
-              <div className="text-right md:flex sm:hidden flex-col text-sm font-semibold ">
+              <div className="name_background ">
                 <div className="-mt-2">
                   <p>Hello</p>
                   <p>Oluwaleke Ojo</p>
@@ -45,14 +45,14 @@ const NavBar = ({ children, dropdownHandler }) => {
                       className="h-8 w-8 rounded-full block"
                       src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                       alt="profile"
-                      width={30}
-                      height={30}
+                      width={35}
+                      height={35}
                     />
                   </div>
                 </div>
               </div>
 
-              <button onClick={dropdownHandler}className="navbar_icons -mr-2 lg:hidden">
+              <button onClick={dropdownHandler}className="navbar_icons -mr-2 sm:-mt-6 lg:mt-0 lg:hidden">
                 <TiThMenu className="text-2xl text-gray-800 " />
               </button>
             </div>

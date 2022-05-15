@@ -4,8 +4,8 @@ import { Chart as ChartJs } from "chart.js/auto";
 
 const WidgetChart = () => {
   return (
-    <div className="flex bg-gray-50 mr-2 relative w-7/12 justify-between">
-      <div className="absolute bg-gradient-to-t from-white opacity-70 h-full w-full top-0 bottom-0"></div>
+    <div className="widget_chart_bg">
+      <div className="widget_chart_overlay"></div>
       <div className="w-32">
         <Line
           data={{

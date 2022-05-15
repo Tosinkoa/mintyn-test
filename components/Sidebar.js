@@ -16,13 +16,13 @@ const Sidebar = ({ children, dropdownHandler }) => {
           <div className="fixed bg-gray-50 min-h-screen w-2/12">
             <div className="sidebar_logo">
               <div className="third_navbar_background">
-                <div className="text-blue-500 -ml-3 font-extrabold md:text-xl sm:hidden lg:flex">TransMonitor</div>
+                <div className="sidebar_title_logo">TransMonitor</div>
               </div>
             </div>
-            <div className="border-b border right-0"></div>
+            <div className="border-b shadow-xl border right-0"></div>
             {/* List */}
             <ul className="sidebar_list_background">
-              <p className="bg-green-500 text-gray-50 rounded-full max-w-fit px-3 py-1 my-4 font-bold">GENERATE INVIOCE</p>
+              <p className="sidebar_generate_invoice">GENERATE INVIOCE</p>
               <li className="sidebar_title">Main</li>
               <li className="sidebar_menu">
                 <div className="flex items-center">

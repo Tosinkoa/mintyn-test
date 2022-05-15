@@ -10,8 +10,16 @@
   @apply text-white  bg-red-500 text-center rounded-full w-4  absolute mx-0 -right-1 -top-2 text-xs;
 }
 
+.generate_voice {
+  @apply bg-green-500 text-gray-50 rounded-full max-w-fit px-3 py-1 font-bold;
+}
+
 .backdrop {
   @apply bg-black  opacity-60 select-none top-0 bottom-0 w-full min-h-screen lg:hidden absolute z-10;
+}
+
+.dropdown_logo {
+  @apply text-blue-500 sm:text-lg -ml-3 font-extrabold md:text-xl sm:flex lg:hidden;
 }
 
 .dropdown_background {
@@ -33,11 +41,11 @@
 /*-----------NavBar----------*/
 
 .navbar_background {
-  @apply fixed inline-flex items-center justify-between h-16 z-10 top-0 bg-gray-50  w-full border-b-2 left-0;
+  @apply fixed inline-flex items-center justify-between h-16 z-10 top-0 bg-gray-50  w-full border-b-2 shadow-lg left-0;
 }
 
 .sec_navbar_background {
-  @apply flex w-full mx-auto px-2 sm:px-6 lg:px-8 mt-3;
+  @apply flex w-full mx-auto px-2 sm:px-6 lg:px-8 lg:mt-3 sm:mt-6;
 }
 
 .navbar_message_bg {
@@ -49,7 +57,7 @@
 }
 
 .navbar_logo {
-  @apply h-16 w-full -space-x-3 sm:-ml-6 inline-flex justify-between lg:hidden;
+  @apply h-16 w-full -space-x-3 sm:-ml-3 inline-flex justify-between lg:hidden;
 }
 
 .navbar_header_title {
@@ -57,11 +65,23 @@
 }
 
 .navbar_icons {
-  @apply p-1  text-gray-400 hover:text-white focus:bg-gray-300;
+  @apply p-1  text-gray-400 hover:text-white;
 }
 
 .navbar_profile_pics {
   @apply bg-gray-800 flex text-sm rounded-full;
+}
+
+.navbar_search {
+  @apply flex rounded-sm h-8 p-4 bg-inherit  sm:w-full md:border-0 sm:border-2 border-gray-400;
+}
+
+.navbar_logo {
+  @apply text-blue-700 sm:text-lg font-extrabold md:text-xl sm:flex lg:hidden;
+}
+
+.name_background {
+  @apply text-right md:flex sm:hidden flex-col text-sm font-semibold;
 }
 
 /*-----------Sidebar----------*/
@@ -87,11 +107,19 @@
 }
 
 .sidebar_menu {
-  @apply  cursor-pointer font-my-font leading-3 tracking-normal py-3  outline-none hover:bg-blue-200 focus:bg-blue-200 w-full focus:ring-0 active:bg-blue-200 -ml-5   -mr-5 pl-5
+  @apply cursor-pointer font-my-font leading-3 tracking-normal py-3  outline-none hover:bg-blue-200 focus:bg-blue-200 w-full focus:ring-0 active:bg-blue-200 -ml-5   -mr-5 pl-5;
 }
 
 .sidebar_title {
   @apply pt-4 pb-2 font-my-font  font-bold text-gray-700;
+}
+
+.sidebar_generate_invoice {
+  @apply bg-green-500 text-gray-50 rounded-full max-w-fit px-3 py-1 my-4 font-bold;
+}
+
+.sidebar_title_logo {
+  @apply text-blue-500 -ml-3 font-extrabold md:text-xl sm:hidden lg:flex;
 }
 
 /*-----------Table----------*/
@@ -112,8 +140,8 @@
   @apply bg-gray-200 rounded-full p-1 ml-2 flex;
 }
 
-.table_head_titles{
-@apply border-b py-2 text-left lg:pl-6 sm:pl-0 bg-gray-300
+.table_head_titles {
+  @apply border-b py-2 text-left lg:pl-6 sm:pl-0 bg-gray-300;
 }
 
 .table_head_row {
@@ -130,4 +158,110 @@
 
 .table_detail {
   @apply font-medium inline-flex text-blue-500 hover:underline;
+}
+
+.menu_on_table {
+  @apply md:inline-flex sm:flex sm:flex-row md:flex-row w-full md:text-sm sm:text-xs;
+}
+
+.show_page {
+  @apply bg-inherit py-1 rounded h-8 text-center -mt-1 text-blue-600 font-semibold;
+}
+
+.table_background {
+  @apply relative w-full mx-auto mt-6 shadow-md;
+}
+
+.menu_below_table {
+  @apply mt-4 ml-6 inline-flex flex-row text-sm font-semibold justify-between w-full md:text-sm sm:text-xs;
+}
+
+.prev_next_btn {
+  @apply rounded px-2 border-2 border-gray-400 p-2 py-1;
+}
+
+/*-----------TableFilter----------*/
+.filter_background {
+  @apply w-full md:flex sm:inline-flex;
+}
+.sec_background {
+  @apply sm:inline-flex  mx-auto border-gray-400 border-b-2;
+}
+
+.search_icon {
+  @apply text-gray-600 border sm:hidden md:inline-flex mr-2 mt-1;
+}
+
+.input_style {
+  @apply bg-inherit border-0 mx-2 rounded w-2/4 placeholder:text-sm placeholder:text-gray-400 active:outline-none focus:outline-none;
+}
+
+/*-----------Chart----------*/
+
+.chart_background {
+  @apply flex sm:mb-4 md:mb-0 bg-gray-50 mr-2  lg:w-7/12 sm:w-full flex-col p-8;
+}
+
+.label_background {
+  @apply inline-flex justify-between mb-4;
+}
+
+.chart_select {
+  @apply flex border-2 border-gray-400 bg-inherit rounded-md px-4 py-1;
+}
+
+.chart_overlay {
+  @apply absolute bg-gradient-to-t from-white opacity-70 h-full w-full top-0 bottom-0;
+}
+.chart_arrows {
+  @apply border-2 border-gray-400 text-3xl rounded-md;
+}
+
+.table_row_data {
+  @apply table_data min-w-min w-1/5 mx-auto;
+}
+
+/*-----------Feature----------*/
+
+.order_payment_bg {
+  @apply rounded-md py-4 px-10 shadow-md bg-gray-50 text-sm font-semibold lg:w-5/12 sm:w-full sm:mt-4 lg:mt-0;
+}
+
+.green_line {
+  @apply w-4/5 bg-green-500 rounded-l-full;
+}
+
+.orange_line {
+  @apply w-1/5 bg-orange-300 rounded-r-full;
+}
+
+/*-----------Widget----------*/
+.widget_background {
+  @apply grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 w-full justify-between;
+}
+
+.widget_sec_bg {
+  @apply flex font-my-font flex-row rounded bg-gray-50 md:max-w-lg p-4  mt-5 justify-center mx-2;
+}
+
+/*-----------WidgetChart----------*/
+.widget_chart_bg {
+  @apply flex bg-gray-50 mr-2 relative w-7/12 justify-between;
+}
+
+.widget_chart_overlay {
+  @apply absolute bg-gradient-to-t from-white opacity-70 h-full w-full top-0 bottom-0;
+}
+
+/*-----------Columnt----------*/
+.status_bg {
+  @apply inline-flex  justify-between font-semibold;
+}
+
+.status_style {
+  @apply inline-flex border-2 border-gray-400 rounded-full px-4 py-2 w-36;
+}
+
+.status_arrow {
+  @apply text-xl ml-1 mt-2;
 }

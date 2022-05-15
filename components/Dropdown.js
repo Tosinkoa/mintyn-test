@@ -24,7 +24,7 @@ const Dropdown = ({ dropdownHandler, showDropdown }) => {
         <div className="dropdown_header" onClick={dropdownHandler}>
         <div className="sidebar_logo">
               <div className="third_navbar_background">
-                <div className="text-blue-500 sm:text-lg -ml-3 font-extrabold md:text-xl sm:hidden lg:flex">TransMonitor</div>
+                <div className="dropdown_logo">TransMonitor</div>
               </div>
             </div>
           <div className="right-20">
@@ -36,7 +36,7 @@ const Dropdown = ({ dropdownHandler, showDropdown }) => {
         {/* List */}
 
         <ul className="sidebar_list_background">
-          <p className="bg-green-500 text-gray-50 rounded-full max-w-fit px-3 py-1 font-bold">GENERATE INVIOCE</p>
+          <p className="generate_voice">GENERATE INVIOCE</p>
           <li className="sidebar_title">Main</li>
           <li className="sidebar_menu">
             <div className="flex items-center">
