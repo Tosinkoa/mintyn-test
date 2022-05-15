@@ -19,9 +19,9 @@ const Chart = ({ data }) => {
       </div>
       <div className="relative">
         <div className="absolute bg-gradient-to-t from-white opacity-70 h-full w-full top-0 bottom-0"></div>
-        <div className="barchartbg">
+        <div>
           <Line
-            height={200}
+            height={100}
             data={data}
             options={{
               maintainAspectRatio: true,

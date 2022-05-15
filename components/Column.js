@@ -24,35 +24,35 @@ export const GoodsColumn = [
       <div>
         {row.values.pending === "Pending" && (
             <div className="inline-flex  justify-between font-semibold">
-            <div className="text-yellow-400 inline-flex border-2 border-gray-400 rounded-full px-4 py-1">
-            <GoPrimitiveDot className="mt-0.5 text-sm " />
+            <div className="text-yellow-400 inline-flex border-2 border-gray-400 rounded-full px-4 py-2 w-36">
+            <GoPrimitiveDot className="text-lg " />
             <p >
                Pending
             </p>
             </div>
-            <IoIosArrowDown className="ml-1 mt-2" />
+            <IoIosArrowDown className="text-xl ml-1 mt-2" />
           </div>
         )}
         {row.values.pending === "Reconcilled" && (
           <div className="inline-flex  justify-between font-semibold">
-            <div className="text-green-500 inline-flex border-2 border-gray-400 rounded-full px-4 py-1">
-            <GoPrimitiveDot className="mt-0.5 text-sm " />
+            <div className="text-green-500 inline-flex border-2 border-gray-400 rounded-full px-4 py-2 w-36">
+            <GoPrimitiveDot className="text-lg " />
             <p >
                Reconcilled
             </p>
             </div>
-            <IoIosArrowDown className="ml-1 mt-2" />
+            <IoIosArrowDown className="text-xl ml-1 mt-2" />
           </div>
         )}
         {row.values.pending === "Un-Reconcilled" && (
             <div className="inline-flex  justify-between font-semibold">
-            <div className="text-gray-300 inline-flex border-2 border-gray-400 rounded-full px-4 py-1">
-            <GoPrimitiveDot className="mt-0.5 text-sm " />
+            <div className="text-gray-300 inline-flex border-2 border-gray-400 rounded-full px-4 py-2 w-36">
+            <GoPrimitiveDot className="text-lg " />
             <p >
                Un-Reconcilled
             </p>
             </div>
-            <IoIosArrowDown className="ml-1 mt-2" />
+            <IoIosArrowDown className="text-xl ml-1 mt-2" />
           </div>
         )}
       </div>
