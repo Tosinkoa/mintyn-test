@@ -9,7 +9,7 @@ const Widget = ({ widgetData }) => {
             <p className="text-sm">{data.title}</p>
             <p className="text-xl ">{data.number}</p>
           </div>
-          <WidgetChart/>
+          <WidgetChart />
         </div>
       ))}
     </div>
