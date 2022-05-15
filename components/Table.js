@@ -40,7 +40,7 @@ const Table = () => {
   const text = `out of ${pageOptions.length} payments`;
 
   return (
-    <div>
+    <div className="mb-6">
       <p className="text-4xl my-6">Payments</p>
       <div className="inline-flex flex-row w-full">
         <div className="inline-flex">
@@ -66,12 +66,12 @@ const Table = () => {
         <div>
           <div className="inline-flex">
             <p className="mx-3">Show</p>
-            <select className="px-2 py-1 rounded ">
-              <option value="All">All</option>
-              <option value="Reconcilled">Reconcilled</option>
-              <option value="Un-reconcilled">Un-reconcilled</option>
-              <option value="Settled">Settled</option>
-              <option value="Unsettled">Unsettled</option>
+            <select className="px-2 py-1 rounded border-2 border-gray-400 ">
+              <option className="bg-gray-50" value="All">All</option>
+              <option className="bg-gray-50" value="Reconcilled">Reconcilled</option>
+              <option className="bg-gray-50" value="Un-reconcilled">Un-reconcilled</option>
+              <option className="bg-gray-50" value="Settled">Settled</option>
+              <option className="bg-gray-50" value="Unsettled">Unsettled</option>
             </select>
           </div>
         </div>

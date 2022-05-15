@@ -13,7 +13,7 @@ const Chart = ({ data }) => {
             scales: {
               x: {
                 grid: {
-                  color: "rgba(94, 142, 236, 0.8)",
+                    display: false,
                 },
                 ticks: {
                   font: {

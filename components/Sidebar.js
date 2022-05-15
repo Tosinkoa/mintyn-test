@@ -22,7 +22,7 @@ const Sidebar = ({ children, dropdownHandler }) => {
             <div className="border-b border right-0"></div>
             {/* List */}
             <ul className="sidebar_list_background">
-              <p className="bg-green-500 text-gray-50 rounded-full max-w-fit px-3 py-1 font-bold">GENERATE INVIOCE</p>
+              <p className="bg-green-500 text-gray-50 rounded-full max-w-fit px-3 py-1 my-4 font-bold">GENERATE INVIOCE</p>
               <li className="sidebar_title">Main</li>
               <li className="sidebar_menu">
                 <div className="flex items-center">

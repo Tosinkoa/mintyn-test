@@ -23,10 +23,10 @@ const NavBar = ({ children, dropdownHandler }) => {
                 </div>
               </div>
 
-              <p className="sm:hidden lg:flex mx-4">Support</p>
-              <p className="sm:hidden lg:flex mx-4">FAQ</p>
+              <p className="sm:hidden lg:flex mx-5">Support</p>
+              <p className="sm:hidden lg:flex mx-5">FAQ</p>
 
-                <a className="relative navbar_icons mx-4">
+                <a className="relative navbar_icons mx-5">
                   <p className="navbar_message_bg">8</p>
                   <MdNotificationsNone className=" text-gray-700 text-2xl cursor-pointer" />
                 </a>
@@ -61,7 +61,7 @@ const NavBar = ({ children, dropdownHandler }) => {
       )}
 
       <div>
-        <div className="w-11/12">{children}</div>
+        <div className="w-full pl-24 pr-10">{children}</div>
       </div>
     </div>
   );
