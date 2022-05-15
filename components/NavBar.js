@@ -26,10 +26,10 @@ const NavBar = ({ children, dropdownHandler }) => {
               <p className="sm:hidden lg:flex mx-5">Support</p>
               <p className="sm:hidden lg:flex mx-5">FAQ</p>
 
-                <a className="relative navbar_icons mx-5">
-                  <p className="navbar_message_bg">8</p>
-                  <MdNotificationsNone className=" text-gray-700 text-2xl cursor-pointer" />
-                </a>
+              <a className="relative navbar_icons mx-5">
+                <p className="navbar_message_bg">8</p>
+                <MdNotificationsNone className=" text-gray-700 text-2xl cursor-pointer" />
+              </a>
 
               <div className="name_background ">
                 <div className="-mt-2">
@@ -52,7 +52,7 @@ const NavBar = ({ children, dropdownHandler }) => {
                 </div>
               </div>
 
-              <button onClick={dropdownHandler}className="navbar_icons -mr-2 sm:-mt-6 lg:mt-0 lg:hidden">
+              <button onClick={dropdownHandler} className="navbar_icons -mr-2 sm:-mt-6 lg:mt-0 lg:hidden">
                 <TiThMenu className="text-2xl text-gray-800 " />
               </button>
             </div>
@@ -61,7 +61,7 @@ const NavBar = ({ children, dropdownHandler }) => {
       )}
 
       <div>
-        <div className="w-full lg:pl-24 lg:pr-10 sm:px-5">{children}</div>
+        <div className="w-full lg:pl-24 lg:pr-10 sm:px-5 overflow-hidden">{children}</div>
       </div>
     </div>
   );
