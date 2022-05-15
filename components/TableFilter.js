@@ -3,7 +3,7 @@ import { FaSearch } from "react-icons/fa";
 const TableFilter = ({ filter, setFilter }) => {
   return (
     <div className="w-full flex ">
-      <span className="flex my-6 mx-auto border-gray-400 border-b-2">
+      <span className="flex  mx-auto border-gray-400 border-b-2">
         <FaSearch className="text-gray-600 border mr-2 mt-1"/>
         <input
           value={filter || ""}

@@ -2,7 +2,6 @@ import Image from "next/image";
 import { MdNotificationsNone } from "react-icons/md";
 import { TiThMenu } from "react-icons/ti";
 import { useRouter } from "next/router";
-import Link from "next/link";
 import { FaSearch } from "react-icons/fa";
 
 const NavBar = ({ children, dropdownHandler }) => {
@@ -27,12 +26,10 @@ const NavBar = ({ children, dropdownHandler }) => {
               <p className="sm:hidden lg:flex mx-4">Support</p>
               <p className="sm:hidden lg:flex mx-4">FAQ</p>
 
-              <Link href="/messages">
-                <a className="relative  navbar_icons mx-4">
-                  <p className="navbar_message_bg">2</p>
+                <a className="relative navbar_icons mx-4">
+                  <p className="navbar_message_bg">8</p>
                   <MdNotificationsNone className=" text-gray-700 text-2xl cursor-pointer" />
                 </a>
-              </Link>
 
               <div className="text-right flex flex-col text-sm font-semibold ">
                 <div className="-mt-2">

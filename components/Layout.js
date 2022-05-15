@@ -17,7 +17,7 @@ const Layout = ({ title, keywords, description, children }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="relative text-gray-700 bg-gray-300">
+      <div className="relative text-gray-700 bg-gray-200">
         <div className="layout_overlay"></div>
         <Sidebar dropdownHandler={dropdownHandler} >{children}</Sidebar>
         <Dropdown dropdownHandler={dropdownHandler} showDropdown={showDropdown} />

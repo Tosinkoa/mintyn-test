@@ -37,11 +37,14 @@ const Table = () => {
 
   const { globalFilter, pageIndex } = state;
 
+  const text = `out of ${pageOptions.length} payments`;
+
   return (
     <div>
-      <p className="text-4xl">Payment</p>
+      <p className="text-4xl my-6">Payments</p>
       <div className="inline-flex flex-row w-full">
-          <p>Showing</p>
+        <div className="inline-flex">
+          <span>Showing</span>
           <select
             onChange={(e) => setPageSize(Number(e.target.value))}
             className="bg-inherit py-1 rounded h-8 text-center -mt-1 text-blue-600 font-semibold"
@@ -52,11 +55,16 @@ const Table = () => {
               </option>
             ))}
           </select>
-            <span className="inline-flex">out of {pageOptions.length} payments</span>
-          <TableFilter filter={globalFilter} setFilter={setGlobalFilter} />
-          <div>
-
-            <div className="inline-flex ">
+          <div className="space-x-1">
+            <span>out</span>
+            <span>of</span>
+            <span>{pageOptions.length}</span>
+            <span>payments</span>
+          </div>
+        </div>
+        <TableFilter filter={globalFilter} setFilter={setGlobalFilter} />
+        <div>
+          <div className="inline-flex">
             <p className="mx-3">Show</p>
             <select className="px-2 py-1 rounded ">
               <option value="All">All</option>
@@ -65,16 +73,16 @@ const Table = () => {
               <option value="Settled">Settled</option>
               <option value="Unsettled">Unsettled</option>
             </select>
-            </div>
           </div>
         </div>
-      <div className="relative w-full mx-auto shadow-md">
+      </div>
+      <div className="relative w-full mx-auto mt-6 shadow-md">
         <table className="table" {...getTableProps()}>
           <thead className="table_head ">
             {headerGroups.map((headerGroup) => (
               <tr className="table_row" {...headerGroup.getHeaderGroupProps()}>
                 {headerGroup.headers.map((column) => (
-                  <th scope="col" className="table_head_row" {...column.getHeaderProps()}>
+                  <th scope="col" className="table_head_titles" {...column.getHeaderProps()}>
                     {column.render("Header")}
                   </th>
                 ))}
@@ -112,60 +120,20 @@ const Table = () => {
           <button
             onClick={() => previousPage()}
             disabled={!canPreviousPage}
-            className=" rounded px-2 border-2 border-gray-700 p-2 py-1"
+            className=" rounded px-2 border-2 border-gray-400 p-2 py-1"
           >
             Previous
           </button>
-          <p className="border-2 rounded border-gray-700 p-2 text-white px-4 bg-blue-600">1</p>
-          <p className="border-2 rounded p-2 px-4 border-gray-700">2</p>
+          <p className="border-2 rounded border-gray-400 p-2 text-white px-4 bg-blue-600">1</p>
+          <p className="border-2 rounded p-2 px-4 border-gray-400">2</p>
           <button
             onClick={() => nextPage()}
             disabled={!canNextPage}
-            className="rounded px-2 border-2 border-gray-700 p-2 py-1"
+            className="rounded px-2 border-2 border-gray-400 p-2 py-1"
           >
             Next
           </button>
         </div>
-
-        {/* <span>
-           Go to page:
-          <input
-            type="number"
-            defaultValue={pageIndex + 1}
-            onChange={(e) => {
-              const pageNumber = e.target.value ? Number(e.target.value) - 1 : 0;
-              gotoPage(pageNumber);
-            }}
-            className="border border-gray-600 rounded-sm ml-1 w-1/5"
-          />
-        </span>
-        <select onChange={(e) => setPageSize(Number(e.target.value))} className="border border-gray-600 py-1 rounded">
-          {[10, 20, 30, 40, 50].map((pageSize) => (
-            <option key={pageSize} value={pageSize}>
-              Show {pageSize}
-            </option>
-          ))}
-        </select>
-        <button onClick={() => gotoPage(0)} disabled={!canPreviousPage}>
-          <ImArrowLeft />
-        </button>
-        <button
-          onClick={() => previousPage()}
-          disabled={!canPreviousPage}
-          className="border rounded-md px-2 bg-indigo-800 text-white py-1"
-        >
-          Previous
-        </button>
-        <button
-          onClick={() => nextPage()}
-          disabled={!canNextPage}
-          className="border rounded-md px-2 bg-indigo-800 text-white py-1 "
-        >
-          Next
-        </button>
-        <button onClick={() => gotoPage(pageCount - 1)} disabled={!canNextPage}>
-          <ImArrowRight />
-        </button> */}
       </div>
     </div>
   );

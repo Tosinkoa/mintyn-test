@@ -1,11 +1,10 @@
-import Image from "next/image";
-import { MdSpaceDashboard, MdChatBubbleOutline } from "react-icons/md";
-import { FaWallet, FaTimes, FaUserTie, FaSignOutAlt } from "react-icons/fa";
-import { AiOutlineTransaction, AiFillPayCircle } from "react-icons/ai";
-import { RiLuggageDepositFill, RiMoneyDollarBoxFill } from "react-icons/ri";
-import { BiTransfer } from "react-icons/bi";
-import { HiUserGroup } from "react-icons/hi";
-import Link from "next/link";
+import { MdSpeed, MdSupportAgent } from "react-icons/md";
+import { BsWallet, BsWallet2, BsRecordCircle } from "react-icons/bs";
+import { BiWalletAlt } from "react-icons/bi";
+import { GrNotes, GrDocumentNotes } from "react-icons/gr";
+import { FaRegUser, FaTimes} from "react-icons/fa";
+import {FcAbout} from 'react-icons/fc'
+import { MdEventNote } from "react-icons/md";
 
 const Dropdown = ({ dropdownHandler, showDropdown }) => {
   return (
@@ -22,126 +21,103 @@ const Dropdown = ({ dropdownHandler, showDropdown }) => {
           showDropdown ? "translate-x-0" : "-translate-x-full"
         } animate ease-in-out duration-700 `}
       >
-        <Link href="/" passHref>
-          <div className="dropdown_header" onClick={dropdownHandler}>
-            <div className="flex ">
-              <Image
-                src="/assets/images/Zelta-Pay-Logo.png"
-                alt="zeltapay-logo"
-                width={50}
-                height={50}
-                objectFit="cover"
-                className="mt-2"
-              />
-              <span className="dropdown_header_title">ZeltaPay</span>
+        <div className="dropdown_header" onClick={dropdownHandler}>
+        <div className="sidebar_logo">
+              <div className="third_navbar_background">
+                <div className="text-blue-500 sm:text-lg -ml-3 font-extrabold md:text-xl sm:hidden lg:flex">TransMonitor</div>
+              </div>
             </div>
-            <div className="right-20">
-              <FaTimes onClick={dropdownHandler} className="dropdown_close" />
-            </div>
+          <div className="right-20">
+            <FaTimes onClick={dropdownHandler} className="dropdown_close" />
           </div>
-        </Link>
+        </div>
+
         <div className="border-b  border-2"></div>
         {/* List */}
 
-        <ul className="flex flex-col mt-2">
+        <ul className="sidebar_list_background">
+          <p className="bg-green-500 text-gray-50 rounded-full max-w-fit px-3 py-1 font-bold">GENERATE INVIOCE</p>
           <li className="sidebar_title">Main</li>
-          <Link href="/" passHref>
-            <li className="sidebar_menu">
-              <a className="flex items-center" onClick={dropdownHandler}>
-                <div>
-                  <MdSpaceDashboard className="text-xl" />
-                </div>
-                <span className="ml-2 text-sm">Dashboard</span>
-              </a>
-            </li>
-          </Link>
-          <Link href="/messages" passHref>
-            <li className="sidebar_menu">
-              <a className="flex items-center" onClick={dropdownHandler}>
-                <div className="relative ">
-                  <p className="messagebackground">2</p>
-                  <MdChatBubbleOutline className="text-lg" />
-                </div>
-                <span className="ml-2 text-sm">Messages</span>
-              </a>
-            </li>
-          </Link>
+          <li className="sidebar_menu">
+            <div className="flex items-center">
+              <MdSpeed />
+              <span className="ml-2">Overview</span>
+            </div>
+          </li>
 
-          <li className="sidebar_title">Lists</li>
+          <li className="sidebar_title pb-2">Payments</li>
+          <li className="sidebar_menu">
+            <div className="flex items-center">
+              <BsWallet />
+              <span className="ml-2">All Payments</span>
+            </div>
+          </li>
 
-          <Link href="/users" passHref>
-            <li className="sidebar_menu">
-              <a className="flex items-center" onClick={dropdownHandler}>
-                <HiUserGroup />
-                <span className="ml-2 text-sm">Users</span>
-              </a>
-            </li>
-          </Link>
-          <Link href="/transactions" passHref>
-            <li className="sidebar_menu">
-              <a className="flex items-center" onClick={dropdownHandler}>
-                <AiOutlineTransaction />
-                <span className="ml-2 text-sm">Transactions</span>
-              </a>
-            </li>
-          </Link>
-          <Link href="/deposits" passHref>
-            <li className="sidebar_menu">
-              <a className="flex items-center" onClick={dropdownHandler}>
-                <RiLuggageDepositFill className="text-lg" />
-                <span className="ml-2 text-sm">Deposits</span>
-              </a>
-            </li>
-          </Link>
-          <Link href="/withdrawals" passHref>
-            <li className="sidebar_menu">
-              <a className="flex items-center  focus:bg-blue-500" onClick={dropdownHandler}>
-                <RiMoneyDollarBoxFill className="text-lg" />
-                <span className="ml-2 text-sm">Withdrawals</span>
-              </a>
-            </li>
-          </Link>
-          <Link href="/bill-payments" passHref>
-            <li className="sidebar_menu">
-              <a className="flex items-center" onClick={dropdownHandler}>
-                <AiFillPayCircle className="text-lg" />
-                <span className="ml-2 text-sm">Bill Payments</span>
-              </a>
-            </li>
-          </Link>
-          <Link href="/transfers" passHref>
-            <li className="sidebar_menu">
-              <a className="flex items-center" onClick={dropdownHandler}>
-                <BiTransfer className="text-lg" />
-                <span className="ml-2 text-sm">Transfers</span>
-              </a>
-            </li>
-          </Link>
-          <Link href="/wallets" passHref>
-            <li className="sidebar_menu">
-              <a className="flex items-center" onClick={dropdownHandler}>
-                <FaWallet className="text-lg" />
-                <span className="ml-2 text-sm">Wallets</span>
-              </a>
-            </li>
-          </Link>
-          <li className="sidebar_title">User</li>
-          <Link href="/profile" passHref>
-            <li className="sidebar_menu">
-              <a className="flex items-center" onClick={dropdownHandler}>
-                <FaUserTie />
-                <span className="ml-2 text-sm">Profile</span>
-              </a>
-            </li>
-          </Link>
-          <Link href="/login" passHref>
-            <li className="sidebar_menu">
-              <div className="flex items-center">
-                <FaSignOutAlt />
-                <span className="ml-2 text-sm">Logout</span>
+          <li className="sidebar_menu">
+            <a className="flex items-center">
+              <div className="relative ">
+                <BsWallet2 />
               </div>
-            </li>
-          </Link>
+              <span className="ml-2 ">Reconcilled Payments</span>
+            </a>
+          </li>
+
+          <li className="sidebar_menu">
+            <a className="flex items-center">
+              <BiWalletAlt />
+              <span className="ml-2 ">Un-Reconcilled Payments</span>
+            </a>
+          </li>
+
+          <li className="sidebar_menu">
+            <a className="flex items-center">
+              <BsRecordCircle />
+              <span className="ml-2 ">Manual Settlement</span>
+            </a>
+          </li>
+
+          <li className="sidebar_title">Orders</li>
+          <li className="sidebar_menu">
+            <a className="flex items-center">
+              <GrNotes />
+              <span className="ml-2 ">All Orders</span>
+            </a>
+          </li>
+
+          <li className="sidebar_menu">
+            <a className="flex items-center">
+              <GrDocumentNotes />
+              <span className="ml-2 ">Pending Orders</span>
+            </a>
+          </li>
+
+          <li className="sidebar_menu">
+            <a className="flex items-center">
+              <MdEventNote />
+              <span className="ml-2 ">Reconcilled Orders</span>
+            </a>
+          </li>
+
+          <li className="sidebar_menu ">
+            <a className="flex items-center mt-4">
+              <FaRegUser />
+              <span className="ml-2  ">Merchant Profile</span>
+            </a>
+          </li>
+
+          <li className="sidebar_menu ">
+            <a className="flex items-center">
+              <MdSupportAgent />
+              <span className="ml-2  ">Support</span>
+            </a>
+          </li>
+
+          <li className="sidebar_menu ">
+            <a className="flex items-center">
+              <FcAbout />
+              <span className="ml-2  ">FAQ</span>
+            </a>
+          </li>
         </ul>
       </div>
     </div>
